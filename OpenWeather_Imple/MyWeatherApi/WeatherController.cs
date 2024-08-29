@@ -19,7 +19,7 @@ namespace OpenWeather_Imple.MyWeatherApi
         [HttpGet("{city}")]
         public async Task<IActionResult> GetWeather(string city)
         {
-            string apiKey = "c50c31982275802438811b380f980525"; // Reemplaza con tu API Key de OpenWeather
+            string apiKey = "api_key"; // Reemplaza con tu API Key de OpenWeather
             string apiUrl = $"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={apiKey}&units=metric&lang=es";
 
             var response = await _httpClient.GetAsync(apiUrl);
